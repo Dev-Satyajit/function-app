@@ -6,8 +6,7 @@
 trigger:
 - master
 
-pool:
-  vmImage: CTXPCONTWRK2469
+pool: Windows Agent
 
 steps:
 - task: Maven@3
