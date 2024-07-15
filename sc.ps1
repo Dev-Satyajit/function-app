@@ -1,1 +1,5 @@
-az functionapp config appsettings set --name function-app-api --resource-group rg-function-app --settings file.name=File.xml
+param(
+	$functionAppName,
+	$resourceGroup
+)
+az functionapp config appsettings set --name $functionAppName --resource-group $resourceGroup --settings file.name=File-1.xml
