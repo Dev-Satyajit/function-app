@@ -25,8 +25,6 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy Files to artifact staging directory'
   inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)'
-    Contents: pom.xml
     TargetFolder: $(Build.ArtifactStagingDirectory)
 
 # - upload: $(Build.ArtifactStagingDirectory)
@@ -35,11 +33,3 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-
-- task: AzureFunctionApp@2
-  inputs:
-    connectedServiceNameARM: 'Azure subscription 1 (cbc0ac1b-8dbc-4b55-b908-10f95fded88c)'
-    appType: 'functionApp'
-    appName: 'function-app-api'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    deploymentMethod: 'auto'
