@@ -1,0 +1,1 @@
+az functionapp config appsettings set --name function-app-api --resource-group rg-function-app --settings file.name=File.xml
