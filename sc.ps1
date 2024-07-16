@@ -1,5 +1,6 @@
 param(
 	$functionAppName,
-	$resourceGroup
+	$resourceGroup,
+	$fileName
 )
-az functionapp config appsettings set --name $functionAppName --resource-group $resourceGroup --settings file.name=File-1.xml
+az functionapp config appsettings set --name $functionAppName --resource-group $resourceGroup --settings file.name=$fileName.xml
