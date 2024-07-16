@@ -4,7 +4,7 @@
 
     <groupId>com.satyajit</groupId>
     <artifactId>function-app</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>Azure Java Functions</name>
@@ -14,7 +14,7 @@
         <java.version>1.8</java.version>
         <azure.functions.maven.plugin.version>1.24.0</azure.functions.maven.plugin.version>
         <azure.functions.java.library.version>2.2.0</azure.functions.java.library.version>
-        <functionAppName>function-app-20240709150808793</functionAppName>
+        <functionAppName>function-app-api</functionAppName>
     </properties>
 
     <dependencies>
