@@ -29,10 +29,3 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-- task: AzureFunctionApp@1
-  displayName: 'Azure Function App Deploy'
-  inputs:
-    azureSubscription: 'Azure subscription 1(cbc0ac1b-8dbc-4b55-b908-10f95fded88c)'
-    appType: functionApp
-    appName: 'funcaa-ci-p'
-    package: '$(Pipeline.Workspace)/drop/target/azure-functions/function-app'
