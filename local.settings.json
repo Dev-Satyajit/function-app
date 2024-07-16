@@ -3,6 +3,7 @@
   "Values": {
     "AzureWebJobsStorage": "",
     "FUNCTIONS_WORKER_RUNTIME": "java",
-    "TARGET_APP_SERVICE_NAME": "function-app-api"
+    "TARGET_APP_SERVICE_NAME": "function-app-api",
+    "file.name": "from local"
   }
 }
