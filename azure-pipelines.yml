@@ -4,8 +4,10 @@
 # https://aka.ms/yaml
 
 trigger:
+- feature*
+- develop
 - stage
-- master
+- main
 
 pool:
   vmImage: windows-latest
