@@ -42,7 +42,7 @@
             "value": "1"
         },
         "hostingPlanName": {
-            "value": "asp-$(TARGET_APP_NAME)"
+            "value": "asp-funcaa-ci-p"
         },
         "serverFarmResourceGroup": {
             "value": "$(TARGET_APP_RESOURCE_GROUP)"
