@@ -6,7 +6,7 @@
             "value": "cbc0ac1b-8dbc-4b55-b908-10f95fded88c"
         },
         "name": {
-            "value": "$(TARGET_APP_NAME)"
+            "value": "funcaa-ci-p"
         },
         "location": {
             "value": "Central India"
@@ -42,7 +42,7 @@
             "value": "1"
         },
         "hostingPlanName": {
-            "value": "ASP-rgfuncaacip-9845"
+            "value": "asp-funcaa-ci-p"
         },
         "serverFarmResourceGroup": {
             "value": "rg-funcaa-ci-p"
@@ -50,7 +50,5 @@
         "alwaysOn": {
             "value": false
         }
-    },
-    "resources": [
-    ]
+    }
 }
