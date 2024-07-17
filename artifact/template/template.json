@@ -3,52 +3,52 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "subscriptionId": {
-            "type": "string"
+            "type": "String"
         },
         "name": {
-            "type": "string"
+            "type": "String"
         },
         "location": {
-            "type": "string"
+            "type": "String"
         },
         "use32BitWorkerProcess": {
-            "type": "bool"
+            "type": "Bool"
         },
         "ftpsState": {
-            "type": "string"
+            "type": "String"
         },
         "storageAccountName": {
-            "type": "string"
+            "type": "String"
         },
         "javaVersion": {
-            "type": "string"
+            "type": "String"
         },
         "netFrameworkVersion": {
-            "type": "string"
+            "type": "String"
         },
         "sku": {
-            "type": "string"
+            "type": "String"
         },
         "skuCode": {
-            "type": "string"
+            "type": "String"
         },
         "workerSize": {
-            "type": "string"
+            "type": "String"
         },
         "workerSizeId": {
-            "type": "string"
+            "type": "String"
         },
         "numberOfWorkers": {
-            "type": "string"
+            "type": "String"
         },
         "hostingPlanName": {
-            "type": "string"
+            "type": "String"
         },
         "serverFarmResourceGroup": {
-            "type": "string"
+            "type": "String"
         },
         "alwaysOn": {
-            "type": "bool"
+            "type": "Bool"
         }
     },
     "variables": {

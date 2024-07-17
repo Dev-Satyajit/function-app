@@ -3,67 +3,51 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "subscriptionId": {
-            "type": "string",
             "value": "cbc0ac1b-8dbc-4b55-b908-10f95fded88c"
         },
         "name": {
-            "type": "string",
-            "value": "$(TARGET_APP_NAME)"
+            "value": "funcaa-ci-p"
         },
         "location": {
-            "type": "string",
             "value": "Central India"
         },
         "use32BitWorkerProcess": {
-            "type": "bool",
             "value": true
         },
         "ftpsState": {
-            "type": "string",
             "value": "FtpsOnly"
         },
         "storageAccountName": {
-            "type": "string",
             "value": "funcaacipstr"
         },
         "javaVersion": {
-            "type": "string",
             "value": "17"
         },
         "netFrameworkVersion": {
-            "type": "string",
             "value": "v6.0"
         },
         "sku": {
-            "type": "string",
             "value": "Dynamic"
         },
         "skuCode": {
-            "type": "string",
             "value": "Y1"
         },
         "workerSize": {
-            "type": "string",
             "value": "0"
         },
         "workerSizeId": {
-            "type": "string",
             "value": "0"
         },
         "numberOfWorkers": {
-            "type": "string",
             "value": "1"
         },
         "hostingPlanName": {
-            "type": "string",
-            "value": "asp-$(TARGET_APP_NAME)"
+            "value": "ASP-rgfuncaacip-9845"
         },
         "serverFarmResourceGroup": {
-            "type": "string",
-            "value": "$(TARGET_APP_RESOURCE_GROUP)"
+            "value": "rg-funcaa-ci-p"
         },
         "alwaysOn": {
-            "type": "bool",
             "value": false
         }
     }
