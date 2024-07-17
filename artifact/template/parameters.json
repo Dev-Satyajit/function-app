@@ -6,7 +6,7 @@
             "value": "cbc0ac1b-8dbc-4b55-b908-10f95fded88c"
         },
         "name": {
-            "value": "funcaa-ci-p"
+            "value": "$(TARGET_APP_NAME)"
         },
         "location": {
             "value": "Central India"
@@ -50,5 +50,7 @@
         "alwaysOn": {
             "value": false
         }
-    }
+    },
+    "resources": [
+    ]
 }
