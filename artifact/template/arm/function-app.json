@@ -166,11 +166,7 @@
             "dependsOn": [],
             "tags": {},
             "properties": {
-                "ApplicationId": "[parameters('name')]",
-                "Request_Source": "IbizaWebAppExtensionCreate",
-                "Flow_Type": "Redfield",
-                "Application_Type": "web",
-                "WorkspaceResourceId": "/subscriptions/cbc0ac1b-8dbc-4b55-b908-10f95fded88c/resourceGroups/DefaultResourceGroup-CID/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-cbc0ac1b-8dbc-4b55-b908-10f95fded88c-CID"
+                "ApplicationId": "[parameters('name')]"
             }
         },
         {
