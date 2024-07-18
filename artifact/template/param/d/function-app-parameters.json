@@ -45,7 +45,7 @@
             "value": "asp-funcaa-ci-d"
         },
         "serverFarmResourceGroup": {
-            "value": "rg-funcaa-ci-d"
+            "value": "rg-funcaa-ci-p"
         },
         "alwaysOn": {
             "value": false
