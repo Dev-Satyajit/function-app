@@ -51,9 +51,6 @@
             "type": "bool"
         }
     },
-    "variables": {
-        "contentShare": "funcaa-ci-pbdeb"
-    },
     "resources": [
         {
             "type": "Microsoft.Web/sites",
@@ -61,12 +58,12 @@
             "name": "[parameters('name')]",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "microsoft.insights/components/funcaa-ci-p",
+                "[concat('microsoft.insights/components/', parameters('name'))]",
                 "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]",
                 "[concat('Microsoft.Storage/storageAccounts/', parameters('storageAccountName'))]"
             ],
             "tags": {
-                "hidden-link: /app-insights-resource-id": "/subscriptions/cbc0ac1b-8dbc-4b55-b908-10f95fded88c/resourceGroups/rg-funcaa-ci-p/providers/Microsoft.Insights/components/funcaa-ci-p"
+                "hidden-link: /app-insights-resource-id": "[concat('/subscriptions/cbc0ac1b-8dbc-4b55-b908-10f95fded88c/resourceGroups/', parameters('serverFarmResourceGroup'), '/providers/Microsoft.Insights/components/', parameters('name'))]"
             },
             "kind": "functionapp",
             "properties": {
@@ -83,7 +80,7 @@
                         },
                         {
                             "name": "APPLICATIONINSIGHTS_CONNECTION_STRING",
-                            "value": "[reference('microsoft.insights/components/funcaa-ci-p', '2015-05-01').ConnectionString]"
+                            "value": "[reference(concat('microsoft.insights/components/', parameters('name')), '2015-05-01').ConnectionString]"
                         },
                         {
                             "name": "AzureWebJobsStorage",
@@ -92,10 +89,6 @@
                         {
                             "name": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
                             "value": "[concat('DefaultEndpointsProtocol=https;AccountName=',parameters('storageAccountName'),';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName')), '2019-06-01').keys[0].value,';EndpointSuffix=','core.windows.net')]"
-                        },
-                        {
-                            "name": "WEBSITE_CONTENTSHARE",
-                            "value": "[variables('contentShare')]"
                         }
                     ],
                     "cors": {
@@ -161,7 +154,7 @@
         {
             "type": "microsoft.insights/components",
             "apiVersion": "2020-02-02-preview",
-            "name": "funcaa-ci-p",
+            "name": "[parameters('name')]",
             "location": "centralindia",
             "dependsOn": [],
             "tags": {},
