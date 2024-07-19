@@ -9,8 +9,7 @@ trigger:
 - stage
 - main
 
-pool:
-  vmImage: windows-latest
+pool: My Agent
 
 steps:
 - task: Maven@4
