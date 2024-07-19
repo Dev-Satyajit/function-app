@@ -35,7 +35,7 @@ public class Function {
         if (name == null) {
             return request.createResponseBuilder(HttpStatus.BAD_REQUEST).body("Please pass a name on the query string or in the request body").build();
         } else {
-            return request.createResponseBuilder(HttpStatus.OK).body("Hello, welcome develop " + name + ", " + s).build();
+            return request.createResponseBuilder(HttpStatus.OK).body("Hello, " + name + ", Dev_" + s).build();
         }
     }
 }
