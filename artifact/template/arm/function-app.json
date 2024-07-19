@@ -44,6 +44,9 @@
         "hostingPlanName": {
             "type": "string"
         },
+        "appInsightsName": {
+            "type": "string"
+        },
         "serverFarmResourceGroup": {
             "type": "string"
         },
@@ -58,12 +61,12 @@
             "name": "[parameters('name')]",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[concat('microsoft.insights/components/', parameters('name'))]",
+                "[concat('microsoft.insights/components/', parameters('appInsightsName'))]",
                 "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]",
                 "[concat('Microsoft.Storage/storageAccounts/', parameters('storageAccountName'))]"
             ],
             "tags": {
-                "hidden-link: /app-insights-resource-id": "[concat('/subscriptions/cbc0ac1b-8dbc-4b55-b908-10f95fded88c/resourceGroups/', parameters('serverFarmResourceGroup'), '/providers/Microsoft.Insights/components/', parameters('name'))]"
+                "hidden-link: /app-insights-resource-id": "[concat('/subscriptions/cbc0ac1b-8dbc-4b55-b908-10f95fded88c/resourceGroups/', parameters('serverFarmResourceGroup'), '/providers/Microsoft.Insights/components/', parameters('appInsightsName'))]"
             },
             "kind": "functionapp",
             "properties": {
@@ -80,7 +83,7 @@
                         },
                         {
                             "name": "APPLICATIONINSIGHTS_CONNECTION_STRING",
-                            "value": "[reference(concat('microsoft.insights/components/', parameters('name')), '2015-05-01').ConnectionString]"
+                            "value": "[reference(concat('microsoft.insights/components/', parameters('appInsightsName')), '2015-05-01').ConnectionString]"
                         },
                         {
                             "name": "AzureWebJobsStorage",
@@ -154,7 +157,7 @@
         {
             "type": "microsoft.insights/components",
             "apiVersion": "2020-02-02-preview",
-            "name": "[parameters('name')]",
+            "name": "[parameters('appInsightsName')]",
             "location": "centralindia",
             "dependsOn": [],
             "tags": {},
