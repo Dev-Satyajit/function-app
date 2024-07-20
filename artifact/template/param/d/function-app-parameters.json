@@ -6,7 +6,7 @@
             "value": "cbc0ac1b-8dbc-4b55-b908-10f95fded88c"
         },
         "name": {
-            "value": "funcaa-ci-d"
+            "value": "ssabcd-ci-fa-d"
         },
         "location": {
             "value": "Central India"
@@ -18,7 +18,7 @@
             "value": "FtpsOnly"
         },
         "storageAccountName": {
-            "value": "funcaacidstr"
+            "value": "ssabcdcisad"
         },
         "javaVersion": {
             "value": "17"
@@ -41,11 +41,16 @@
         "numberOfWorkers": {
             "value": "1"
         },
+
         "hostingPlanName": {
-            "value": "asp-funcaa-ci-d"
+            "value": "necomm-ci-asp-d"
+        },
+
+        "appInsightsName": {
+            "value": "ssabcd-ci-ai-d"
         },
         "serverFarmResourceGroup": {
-            "value": "rg-funcaa-ci-d"
+            "value": "necomm-ci-d"
         },
         "alwaysOn": {
             "value": false
