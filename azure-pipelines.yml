@@ -24,10 +24,20 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+
 - task: CopyFiles@2
   displayName: 'Copy Files to artifact staging directory'
   inputs:
+    SourceFolder: $(System.DefaultWorkingDirectory)
+    Contents: |
+      **/artifact/**
+      **/azure-functions/**
+      infrastructure_changed.txt
+      pom.xml
     TargetFolder: $(Build.ArtifactStagingDirectory)
+    OverWrite: true
+
 - task: PublishBuildArtifacts@1
+  displayName: 'Publish artifacts'
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: $(Build.ArtifactStagingDirectory)
